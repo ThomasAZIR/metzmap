@@ -5,7 +5,9 @@ import 'leaflet/dist/leaflet.css';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import leafRed from './assets/cathicone.png';
 import leafPoint from './assets/locapoint.png';
+import axios from 'axios';
 import TestPage from "./pages/test";
+
 import {
     HashRouter as Router,
     Route,
@@ -13,6 +15,7 @@ import {
     Link,
     Redirect
 } from "react-router-dom";
+import {win} from "leaflet/src/core/Browser";
 
 var myIcon = L.icon({
 
@@ -27,6 +30,7 @@ class App extends Component {
         lat: 49.1191,
         lng: 6.1727,
         zoom: 17,
+        persons: [],
     }
 
     state2 = {
@@ -52,6 +56,9 @@ class App extends Component {
         popupAnchor:  [-3, -86]
     });
 
+
+
+
     componentDidMount(){
         let Options = {
             enableHighAccuracy: true,
@@ -60,14 +67,32 @@ class App extends Component {
         };
         this.setState({ready:false, error: null });
         navigator.geolocation.watchPosition( this.success, this.fail, Options);
+
+        axios.get("https://devweb.iutmetz.univ-lorraine.fr/~vivier19u/monumetz/articles.php")
+            .then(res => {
+                console.log(res)
+                this.setState({})
+            })
+        axios.get(`https://devweb.iutmetz.univ-lorraine.fr/~vivier19u/monumetz/articles.php`)
+            .then(res => {
+                const persons = res.data;
+                this.setState({ persons });
+            })
+
+        console.log(this)
     }
 
     success = (position) => {
         console.log(position.coords.latitude);
+        console.log(position.coords.longitude);
         this.setState({
             ready:true,
             where: {lat: position.coords.latitude,lng:position.coords.longitude }
         })
+        if((position.coords.latitude >= 49.034712999999995) && (position.coords.latitude <= 49.034712999999997) ) {
+            window.alert('yes!');
+            console.log('yes');
+        }
     }
     fail = (err) => {
         this.setState({error: err.message});
@@ -114,6 +139,9 @@ class App extends Component {
                         )}
 
                         <Link to="/test">TestPage</Link>
+                        <ul>
+                        { this.state.persons.map(person => <li>{person.content}</li>)}
+                        </ul>
                     </div>
                 </section>
 
