@@ -45,3 +45,7 @@ marker{
     transform: rotate(360deg);
   }
 }
+
+footer{
+  background-color: black;
+}

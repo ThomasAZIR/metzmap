@@ -3,10 +3,9 @@ import './App.css';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
-import leafRed from './assets/cathicone.png';
-import leafPoint from './assets/locapoint.png';
 import axios from 'axios';
 import TestPage from "./pages/test";
+import marqueursPerso from "./utils/marqueursPerso"
 
 import {
     HashRouter as Router,
@@ -38,6 +37,7 @@ class App extends Component {
         lng: 6.1755555555555555,
     }
 
+    /*
     redIcon = L.icon({
         iconUrl: leafRed,
         iconSize:     [75, 75], // size of the icon
@@ -45,16 +45,16 @@ class App extends Component {
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
         shadowAnchor: [4, 62],  // the same for the shadow
         popupAnchor:  [-3, -86]
-    });
+    });*/
 
-    locaIcon = L.icon({
+    /*locaIcon = L.icon({
         iconUrl: leafPoint,
         iconSize:     [32, 55], // size of the icon
         shadowSize:   [50, 64], // size of the shadow
         iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
         shadowAnchor: [4, 62],  // the same for the shadow
         popupAnchor:  [-3, -86]
-    });
+    });*/
 
 
 
@@ -89,61 +89,57 @@ class App extends Component {
             ready:true,
             where: {lat: position.coords.latitude,lng:position.coords.longitude }
         })
-        if((position.coords.latitude >= 49.034712999999995) && (position.coords.latitude <= 49.034712999999997) ) {
+        /*if((position.coords.latitude >= 49.034712999999995) && (position.coords.latitude <= 49.034712999999997) ) {
             window.alert('yes!');
             console.log('yes');
-        }
+        }*/
     }
     fail = (err) => {
         this.setState({error: err.message});
     }
 
      MainPage = () => {
-         const position = [this.state.lat, this.state.lng];
-         const position2 = [this.state2.lat, this.state2.lng];
-        return (
-            <div className = 'App'>
+                const position = [this.state.lat, this.state.lng];
+                const positionCath = [49.1202767, 6.1755555555555555];
+                return (
+                <div className = 'App'>
                 <h1> Monu'Metz</h1>
                 <Map className="map" center={position} zoom={this.state.zoom}>
-                    <TileLayer
-                        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                    />
-                    <Marker position={position2} icon={this.redIcon}>
-                        <Popup>
-                            Cathédrale de Metz<br />
-                            Adresse : places d'Armes  <br />
-                            Cathédrale Saint-Etienne
-                        </Popup>
-                    </Marker>
-                    { this.state.ready && (<Marker position={[this.state.where.lat,this.state.where.lng]} icon={this.locaIcon}>
-                        <Popup>
-                            Votre position
-                        </Popup>
-                    </Marker>)}
+                <TileLayer
+                attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                {marqueursPerso.CathMarqueur()}
+                {marqueursPerso.CentrePomMarqueur()}
+                { this.state.ready && (<Marker position={[this.state.where.lat,this.state.where.lng]} icon={marqueursPerso.locaIcon}>
+                    <Popup>
+                        Votre position
+                    </Popup>
+                </Marker>)}
                 </Map>
                 <section>
-                    <h1> coordonnées : </h1>
-                    <div >
-                        { !this.state.ready && (
-                            <p >Using Geolocation in React Native.</p>
-                        )}
-                        { this.state.error && (
-                            <p>{this.state.error}</p>
-                        )}
-                        { this.state.ready && (
-                            <p>{
-                                `Latitude: ${this.state.where.lat}
+                <h1> coordonnées : </h1>
+                <div >
+                { !this.state.ready && (
+                    <p >Using Geolocation in React Native.</p>
+                )}
+                { this.state.error && (
+                    <p>{this.state.error}</p>
+                )}
+                { this.state.ready && (
+                    <p>{
+                        `Latitude: ${this.state.where.lat}
                     Longitude: ${this.state.where.lng}`
-                            }</p>
-                        )}
+                    }</p>
+                )}
 
-                        <Link to="/test">TestPage</Link>
-                        <ul>
-                        { this.state.persons.map(person => <li>{person.content}</li>)}
-                        </ul>
-                    </div>
+                <Link to="/test">TestPage</Link>
+                <ul>
+                { this.state.persons.map(person => <li>{person.content}</li>)}
+                </ul>
+                </div>
                 </section>
+                    <footer>super</footer>
 
 
             </div>

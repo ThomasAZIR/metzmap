@@ -12,7 +12,9 @@ const TestPage = () => {
     return (
         <div>
             <p>Test 222</p>
-            <Link to="/">MainPage</Link>
+            <Link to="/"><section><article><p>test</p></article></section></Link>
+
+            <footer>super</footer>
         </div>
     );
 };
