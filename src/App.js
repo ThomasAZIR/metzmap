@@ -116,8 +116,7 @@ class App extends Component {
                 </Marker>)}
 
                     {!(this.state.monuments.data)&&
-                    this.state.monuments.map(person => <Marker position={[parseFloat(person.latitu),parseFloat(person.longitu)]} icon={marqueursPerso.flagIcon}><Popup>{person.nom} <br /> {person.adresse} <br /> {person.libelle} </Popup> </Marker>)});}
-
+                    this.state.monuments.map(person => <Marker position={[parseFloat(person.latitu),parseFloat(person.longitu)]} icon={marqueursPerso.flagIcon}><Popup>{person.nom} <br /> {person.adresse} <br /> {person.libelle} </Popup> </Marker>)}
                 </Map>
                     <footer className="App-footer">
                         <>
@@ -142,7 +141,6 @@ class App extends Component {
                             </ButtonGroup>
                         </>
                     </footer>
-
             </div>
         );
     };
