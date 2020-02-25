@@ -16,7 +16,7 @@ import circuit from "../assets/circuitb.png";
 import carto from "../assets/carteb.png";
 import monum from "../assets/rechercheb.png";
 /* We simply can use an array and loop and print each user */
-const TestPage = () => {
+const TestPage2 = () => {
     return (
         <div className = 'App'>
             <header className="App-header">
@@ -24,7 +24,7 @@ const TestPage = () => {
             </header>
 
             <body>
-            <p>Liste des monuments</p>
+            <p>Parcours</p>
             </body>
 
             <footer className="App-footer">
@@ -44,9 +44,9 @@ const TestPage = () => {
                     `}
                     </style>
                     <ButtonGroup className="BarreBouton" aria-label="Basic example">
-                        <Button  variant="prem" className="BoutonMenu"><Link to="/test2"><img src={circuit} className="Picto" alt="circuit" /></Link></Button>
+                        <Button  variant="sec" className="BoutonMenuSelec"><Link to="/test2"><img src={circuit} className="Picto" alt="circuit" /></Link></Button>
                         <Button  variant="prem" className="BoutonMenu"><Link to="/"><img src={carto} className="Picto" alt="carte" /></Link></Button>
-                        <Button  variant="sec" className="BoutonMenuSelec"><Link to="/test"><img src={monum} className="PictoMonu" alt="recherche" /></Link></Button>
+                        <Button  variant="prem" className="BoutonMenu"><Link to="/test"><img src={monum} className="PictoMonu" alt="recherche" /></Link></Button>
                     </ButtonGroup>
                 </>
             </footer>
@@ -55,4 +55,4 @@ const TestPage = () => {
     );
 };
 
-export default TestPage;
+export default TestPage2;

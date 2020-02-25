@@ -5,7 +5,15 @@ import 'leaflet/dist/leaflet.css';
 import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import axios from 'axios';
 import TestPage from "./pages/test";
+import TestPage2 from "./pages/test2";
 import marqueursPerso from "./utils/marqueursPerso"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import logo from './assets/logoo.png';
+import carto from './assets/carteb.png';
+import circuit from './assets/circuitb.png';
+import monum from './assets/rechercheb.png';
 
 import {
     HashRouter as Router,
@@ -29,33 +37,8 @@ class App extends Component {
         lat: 49.1191,
         lng: 6.1727,
         zoom: 17,
-        persons: [],
+        monuments: [],
     }
-
-    state2 = {
-        lat: 49.1202767,
-        lng: 6.1755555555555555,
-    }
-
-    /*
-    redIcon = L.icon({
-        iconUrl: leafRed,
-        iconSize:     [75, 75], // size of the icon
-        shadowSize:   [50, 64], // size of the shadow
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-        shadowAnchor: [4, 62],  // the same for the shadow
-        popupAnchor:  [-3, -86]
-    });*/
-
-    /*locaIcon = L.icon({
-        iconUrl: leafPoint,
-        iconSize:     [32, 55], // size of the icon
-        shadowSize:   [50, 64], // size of the shadow
-        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-        shadowAnchor: [4, 62],  // the same for the shadow
-        popupAnchor:  [-3, -86]
-    });*/
-
 
 
 
@@ -75,12 +58,18 @@ class App extends Component {
             })
         axios.get(`https://devweb.iutmetz.univ-lorraine.fr/~vivier19u/monumetz/articles.php`)
             .then(res => {
-                const persons = res.data;
-                this.setState({ persons });
+                const monuments = res.data;
+                this.setState({ monuments });
             })
 
         console.log(this)
     }
+
+    marqueursWeb= () => {
+        if((!this.state.monuments.data)){
+            this.state.monuments.map(person => {/*console.log('yes');console.log(parseFloat(person.latitu)); console.log(parseFloat(person.longitu)); */return(<Marker position={[parseFloat(person.latitu),parseFloat(person.longitu)]} icon={marqueursPerso}><Popup>Yes</Popup> </Marker>)});
+        }
+}
 
     success = (position) => {
         console.log(position.coords.latitude);
@@ -98,12 +87,15 @@ class App extends Component {
         this.setState({error: err.message});
     }
 
+
+
      MainPage = () => {
                 const position = [this.state.lat, this.state.lng];
-                const positionCath = [49.1202767, 6.1755555555555555];
                 return (
                 <div className = 'App'>
-                <h1> Monu'Metz</h1>
+                    <header className="App-header">
+                        <img src={logo} className="App-logo" alt="logo" />
+                    </header>
                 <Map className="map" center={position} zoom={this.state.zoom}>
                 <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -111,47 +103,56 @@ class App extends Component {
                 />
                 {marqueursPerso.CathMarqueur()}
                 {marqueursPerso.CentrePomMarqueur()}
+                {marqueursPerso.OperaMarqueur()}
+                {marqueursPerso.porteAllMarqueur()}
+                {marqueursPerso.porteSerpMarqueur()}
+                {marqueursPerso.templeNeufMarqueur()}
+                {marqueursPerso.tourCamoufleMarqueur()}
+                {this.marqueursWeb()}
                 { this.state.ready && (<Marker position={[this.state.where.lat,this.state.where.lng]} icon={marqueursPerso.locaIcon}>
                     <Popup>
                         Votre position
                     </Popup>
                 </Marker>)}
+
+                    {!(this.state.monuments.data)&&
+                    this.state.monuments.map(person => <Marker position={[parseFloat(person.latitu),parseFloat(person.longitu)]} icon={marqueursPerso.flagIcon}><Popup>{person.nom} <br /> {person.adresse} <br /> {person.libelle} </Popup> </Marker>)});}
+
                 </Map>
-                <section>
-                <h1> coordonnées : </h1>
-                <div >
-                { !this.state.ready && (
-                    <p >Using Geolocation in React Native.</p>
-                )}
-                { this.state.error && (
-                    <p>{this.state.error}</p>
-                )}
-                { this.state.ready && (
-                    <p>{
-                        `Latitude: ${this.state.where.lat}
-                    Longitude: ${this.state.where.lng}`
-                    }</p>
-                )}
-
-                <Link to="/test">TestPage</Link>
-                <ul>
-                { this.state.persons.map(person => <li>{person.content}</li>)}
-                </ul>
-                </div>
-                </section>
-                    <footer>super</footer>
-
+                    <footer className="App-footer">
+                        <>
+                            <style type="text/css">
+                                {`
+                        .btn-prem {
+                        background-color: lightseagreen;
+                                  }
+                    `}
+                            </style>
+                            <style type="text/css">
+                                {`
+                        .btn-sec {
+                        background-color: darkslategrey;
+                                  }
+                    `}
+                            </style>
+                            <ButtonGroup className="BarreBouton" aria-label="Basic example">
+                                <Button  variant="prem" className="BoutonMenu"><Link to="/test2"><img src={circuit} className="Picto" alt="circuit" /></Link></Button>
+                                <Button  variant="sec" className="BoutonMenuSelec"><Link to="/"><img src={carto} className="Picto" alt="carte" /></Link></Button>
+                                <Button  variant="prem" className="BoutonMenu"><Link to="/test"><img src={monum} className="PictoMonu" alt="recherche" /></Link></Button>
+                            </ButtonGroup>
+                        </>
+                    </footer>
 
             </div>
         );
     };
 
     render(){
-
         return (
             <Router>
                 <Route exact path="/" component={this.MainPage} />
                 <Route exact path="/test" component={TestPage} />
+                <Route exact path="/test2" component={TestPage2} />
             </Router>
   );
   }
