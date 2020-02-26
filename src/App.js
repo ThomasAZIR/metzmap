@@ -13,11 +13,11 @@ import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import axios from 'axios';
 import TestPage from "./pages/test";
 import TestPage2 from "./pages/test2";
-import Cathedrale from "./pages/test";
+import Cathedrale from "./pages/DesCathedrale";
 import Opera from "./pages/test";
-import Templeneuf from "./pages/test";
+import Templeneuf from "./pages/DesTempleNeuf";
 import Porteserp from "./pages/test";
-import Porteall from "./pages/test";
+import Porteall from "./pages/DesPorteDesAllemands";
 import Centrepom from "./pages/test";
 import Tourcamoufle from "./pages/test";
 import marqueursPerso from "./utils/marqueursPerso"
