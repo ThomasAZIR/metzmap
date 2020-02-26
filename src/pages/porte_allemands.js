@@ -15,33 +15,23 @@ import Button from "react-bootstrap/Button";
 import circuit from "../assets/circuitb.png";
 import carto from "../assets/carteb.png";
 import monum from "../assets/rechercheb.png";
+import porte_all from "../assets/images_monuments/Porte des Allemands.jpg"
 /* We simply can use an array and loop and print each user */
-const TestPage = () => {
+
+const Porte_All = () => {
     return (
         <div className = 'App'>
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
             </header>
-            <h1>Liste des monuments</h1>
+            <h1>Porte des Allemands</h1>
+            <img src={porte_all}/>
             <div className="liste">
-                <div className="sep">
-                    <Link to="/cathédraleSE"><h2>Cathédrale Saint-Etienne de Metz</h2></Link>
-                <p>Adresse : places d'Armes - 57000 Metz</p>
-                <p>Coordonnées : Lat: 49.120476 / Long: 6.175774</p>
-                <p>Description : La cathédrale Saint-Étienne de Metz est la cathédrale catholique du diocèse de Metz, dans le département français de la Moselle en région Grand Est.</p>
+                <div className="last">
+                    <p>Adresse: Boulevard André Maginot - 57000 Metz</p>
+                    <p>Coordonnées: Lat: 49.118054 / Long: 6.185340</p>
+                    <p>Description: Site Historique</p>
                 </div>
-            <div className="sep">
-                <Link to="/pompidou_des"><h2>Centre Pompidou de Metz</h2></Link>
-                <p>Adresse: 1 Parvis des Droits de l'Homme - 57020 Metz</p>
-                <p>Coordonnées: Lat: 49.108359 / Long: 6.181696</p>
-                <p>Description: Musée d'Art </p>
-            </div>
-            <div className="last">
-                <Link to="/porte_allemands"><h2>Porte des Allemands</h2></Link>
-                <p>Adresse: Boulevard André Maginot - 57000 Metz</p>
-                <p>Coordonnées: Lat: 49.118054 / Long: 6.185340</p>
-                <p>Description: Site Historique</p>
-            </div>
             </div>
 
             <footer className="App-footer">
@@ -72,4 +62,4 @@ const TestPage = () => {
     );
 };
 
-export default TestPage;
+export default Porte_All;
