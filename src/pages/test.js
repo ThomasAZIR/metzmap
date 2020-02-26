@@ -22,10 +22,21 @@ const TestPage = () => {
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
             </header>
-
-            <body>
-            <p>Liste des monuments</p>
-            </body>
+            <h1>Liste des monuments</h1>
+            <div className="liste">
+            <div className="sep">
+                <h2>Centre Pompidou de Metz</h2>
+                <p>Adresse: 1 Parvis des Droits de l'Homme - 57020 Metz</p>
+                <p>Coordonnées: Lat: 49.108359 / Long: 6.181696</p>
+                <p>Description: Musée d'Art </p>
+            </div>
+            <div className="last">
+                <h2>Porte des Allemands</h2>
+                <p>Adresse: Boulevard André Maginot - 57000 Metz</p>
+                <p>Coordonnées: Lat: 49.118054 / Long: 6.185340</p>
+                <p>Description: Site Historique</p>
+            </div>
+            </div>
 
             <footer className="App-footer">
                 <>

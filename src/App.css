@@ -80,3 +80,36 @@ marker{
   width: 100%;
   background-color: darkslategrey;
 }
+
+h1{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  color: lightseagreen;
+}
+
+.liste{
+  text-align: center;
+  border-width: 3px;
+  border-style: solid;
+  border-color: lightseagreen;
+  border-radius: 20px;
+  margin-top: 2%;
+  margin-left: 25%;
+  margin-right: 25%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: lightseagreen;
+  color: white;
+}
+
+.sep{
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-bottom-color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.last {
+  padding-top: 20px;
+}
