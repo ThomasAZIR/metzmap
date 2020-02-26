@@ -102,13 +102,13 @@ class checkDist extends Component {
 
 
     static checkDistAll = (lat1,lon1) => {
-        this.checkDistCath(lat1,lon1);
-        this.checkDistCentrePom(lat1,lon1);
-        this.checkDistOpera(lat1,lon1);
-        this.checkporteAll(lat1,lon1);
-        this.checkporteSerp(lat1,lon1);
-        this.checktempleNeuf(lat1,lon1);
-        this.checktourCamoufle(lat1,lon1);
+        //this.checkDistCath(lat1,lon1);
+        //this.checkDistCentrePom(lat1,lon1);
+        //this.checkDistOpera(lat1,lon1);
+        //this.checkporteAll(lat1,lon1);
+        //this.checkporteSerp(lat1,lon1);
+        //this.checktempleNeuf(lat1,lon1);
+        //this.checktourCamoufle(lat1,lon1);
     }
 }
 
