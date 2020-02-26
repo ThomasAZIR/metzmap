@@ -33,49 +33,49 @@ const TestPage = () => {
             <h1>Liste des monuments</h1>
             <div className="liste">
                 <div className="sep">
-                <Link to="/monu/cathedrale"><h2>Cathédrale Saint-Etienne de Metz</h2></Link>
+                <Link className="lienNofif" to="/monu/cathedrale"><h2>Cathédrale Saint-Etienne de Metz</h2></Link>
                     <Link to="/monu/cathedrale"><img className="listemon" src={catheSE}/></Link>
                 <p>Adresse : places d'Armes - 57000 Metz</p>
                 <p>Coordonnées : Lat: 49.120476 - Long: 6.175774</p>
                 <p>Description : La cathédrale Saint-Étienne de Metz est la cathédrale catholique du diocèse de Metz, dans le département français de la Moselle en région Grand Est.</p>
                 </div>
                 <div className="sep">
-                    <Link to="/monu/centrepom"><h2>Centre Pompidou de Metz</h2></Link>
+                    <Link className="lienNofif" to="/monu/centrepom"><h2>Centre Pompidou de Metz</h2></Link>
                     <Link to="/monu/centrepom"><img className="listemon" src={pompidou}/></Link>
                     <p>Adresse: 1 Parvis des Droits de l'Homme - 57020 Metz</p>
                     <p>Coordonnées: Lat: 49.108359 - Long: 6.181696</p>
                     <p>Description: Musée d'Art </p>
                 </div>
                 <div className="sep">
-                    <Link to="/monu/templeneuf"></Link><h2>Temple Neuf</h2>
+                    <Link className="lienNofif" to="/monu/templeneuf"><h2>Temple Neuf</h2></Link>
                     <Link to="/monu/templeneuf"><img className="listemon" src={temple9}/></Link>
                     <p>Adresse : Place de la Comédie - 57000 Metz</p>
                     <p>Coordonnées : Lat: 49.120725 - Long: 6.172121</p>
                     <p>Le Temple neuf, ou Nouveau Temple protestant, est un édifice de culte réformé d’Alsace et de Lorraine construit à Metz, entre 1901 et 1905, durant la période wilhelminienne.</p>
                 </div>
                 <div className="sep">
-                    <Link to="/monu/porteserp"></Link><h2>Porte Serpenoise</h2>
+                    <Link className="lienNofif" to="/monu/porteserp"><h2>Porte Serpenoise</h2></Link>
                     <Link to="/monu/porteserp"><img className="listemon" src={porte_serp}/></Link>
                     <p>Adresse : 53 Rue Mazelle - 57000 Metz</p>
                     <p>Coordonnées : Lat: 49.112589 - Long: 6.171004</p>
                     <p>La porte Serpenoise est une porte de ville située à l’angle de l’avenue Robert Schuman et de la rue du Général Gaston-Dupuis dans le quartier de Metz-Centre.</p>
                 </div>
                 <div className="sep">
-                    <Link to="/monu/tourcamoufle"></Link><h2>Tour Camoufle</h2>
+                    <Link className="lienNofif" to="/monu/tourcamoufle"><h2>Tour Camoufle</h2></Link>
                     <Link to="/monu/tourcamoufle"><img className="listemon" src={tour_cam}/></Link>
                     <p>Adresse : Square Camoufle - 57000 Metz</p>
                     <p>Coordonnées : Lat: 49.111973 - Long: 6.173487</p>
                     <p>La tour Camoufle est un vestige de l’ancienne enceinte médiévale de Metz en Moselle. C’est l’une des rares tours de l’enceinte médiévale à avoir été conservée.</p>
                 </div>
                 <div className="sep">
-                    <Link to="/monu/opera"></Link><h2>Opéra-Théâtre de Metz Métropôle</h2>
+                    <Link className="lienNofif" to="/monu/opera"><h2>Opéra-Théâtre de Metz Métropôle</h2></Link>
                     <Link to="/monu/opera"><img className="listemon" src={opera_the}/></Link>
                     <p>Adresse : 5 Place de la Comédie - 57000 Metz</p>
                     <p>Coordonnées : Lat: 49.121898 - Long: 6.172656</p>
                     <p>L'un des premiers théâtres construits en France et le plus ancien théâtre encore en activité.</p>
                 </div>
                 <div className="last">
-                    <Link to="/monu/porteall"><h2>Porte des Allemands</h2></Link>
+                    <Link className="lienNofif" to="/monu/porteall"><h2>Porte des Allemands</h2></Link>
                     <Link to="/monu/porteall"><img className="listemon" src={porte_all}/></Link>
                     <p>Adresse: Boulevard André Maginot - 57000 Metz</p>
                     <p>Coordonnées: Lat: 49.118054 - Long: 6.185340</p>

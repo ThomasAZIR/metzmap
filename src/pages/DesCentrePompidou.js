@@ -18,8 +18,8 @@ import monum from "../assets/rechercheb.png";
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import Carousel from "react-bootstrap/Carousel";
-import CP from "../assets/CP.jpg";
-import CP2 from "../assets/CP2.jfif";
+import CP from "../assets/images_monuments/CP.jpg";
+import CP2 from "../assets/images_monuments/CP2.jfif";
 
 /* We simply can use an array and loop and print each user */
 const DesCP = () => {

@@ -87,7 +87,7 @@ class App extends Component {
         var la = 49.120144;
         var lo = 6.175728;
         //console.log(this.calculDist(lat1,lon1,la,lo))
-        if ((this.calculDist(lat1,lon1,la,lo)<100) && App.notifiableCath){
+        if ((this.calculDist(lat1,lon1,la,lo)<0.1) && App.notifiableCath){
             App.notifiableCath = false;
             App.handleOnClickDefault("Cathédrale", "/monu/cathedrale");
             if (navigator.vibrate) {
@@ -95,7 +95,7 @@ class App extends Component {
                 navigator.vibrate(2000);
             }
         }
-        else if ((this.calculDist(lat1,lon1,la,lo)>=100) && !App.notifiableCath){
+        else if ((this.calculDist(lat1,lon1,la,lo)>=0.1) && !App.notifiableCath){
             App.notifiableCath = true;
         }
     }

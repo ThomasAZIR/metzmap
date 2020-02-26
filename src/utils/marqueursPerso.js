@@ -10,6 +10,13 @@ import tourcamoufle from "../assets/marqueurs/tourcamoufle.png";
 import flagIcon from "../assets/marqueurs/flagIcon.png";
 import React, {Component} from "react";
 import {Marker, Popup} from "react-leaflet";
+import {
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Link,
+    Redirect
+} from "react-router-dom";
 
 class marqueursPerso extends Component {
 
@@ -103,6 +110,7 @@ class marqueursPerso extends Component {
                     <h1>Cathédrale de Metz</h1><br />
                     Adresse : places d'Armes  <br />
                     La cathédrale Saint-Étienne de Metz est la cathédrale catholique du diocèse de Metz, dans le département français de la Moselle en région Grand Est.
+                    <br/><Link classename="lienNotif" to="/monu/cathedrale" > Plus d'infos</Link>
                 </Popup>
             </Marker>
         );
@@ -116,6 +124,7 @@ class marqueursPerso extends Component {
                     <h1>Centre Pompidou</h1><br />
                     1 Parvis des Droits de l'Homme, 57020 Metz  <br />
                     Le centre Pompidou-Metz (CPM) est un établissement public de coopération culturelle d’art situé à Metz, entre le parc de la Seille et la gare.
+                    <br/><Link classename="lienNotif" to="/monu/centrepom" > Plus d'infos</Link>
                 </Popup>
             </Marker>
         );
@@ -129,6 +138,7 @@ class marqueursPerso extends Component {
                     <h1>Opéra-Théâtre</h1><br />
                     5 Place de la Comédie, 57000 Metz  <br />
                     L'un des premiers théâtres construits en France et le plus ancien théâtre encore en activité.
+                    <br/><Link classename="lienNotif" to="/monu/opera" > Plus d'infos</Link>
                 </Popup>
             </Marker>
         );
@@ -142,6 +152,7 @@ class marqueursPerso extends Component {
                     <h1>Porte des Allemands</h1><br />
                     Boulevard André Maginot, 57000 Metz  <br />
                     La porte des Allemands est une porte de ville fortifiée. Elle sert de pont sur la Seille du xiiie siècle au début du xxe siècle. L’édifice est aujourd’hui le plus important vestige des remparts médiévaux messins et témoigne de l’évolution de l’architecture militaire de Metz au Moyen Âge.
+                    <br/><Link classename="lienNotif" to="/monu/porteall" > Plus d'infos</Link>
                 </Popup>
             </Marker>
         );
@@ -154,7 +165,9 @@ class marqueursPerso extends Component {
                 <Popup>
                     <h1>La Porte Serpenoise </h1><br />
                     Avenue Robert Schuman, 57000 Metz  <br />
-                    La porte Serpenoise est une porte de ville située à l’angle de l’avenue Robert Schuman et de la rue du Général Gaston-Dupuis dans le quartier de Metz-Centre.                 </Popup>
+                    La porte Serpenoise est une porte de ville située à l’angle de l’avenue Robert Schuman et de la rue du Général Gaston-Dupuis dans le quartier de Metz-Centre.
+                    <br/><Link classename="lienNotif" to="/monu/opera" > Plus d'infos</Link>
+                </Popup>
             </Marker>
         );
     };
@@ -166,7 +179,9 @@ class marqueursPerso extends Component {
                 <Popup>
                     <h1>Temple Neuf </h1><br />
                     Place de la Comédie, 57000 Metz  <br />
-                    Le Temple neuf, ou Nouveau Temple protestant, est un édifice de culte réformé d’Alsace et de Lorraine construit à Metz, entre 1901 et 1905, durant la période wilhelminienne.             </Popup>
+                    Le Temple neuf, ou Nouveau Temple protestant, est un édifice de culte réformé d’Alsace et de Lorraine construit à Metz, entre 1901 et 1905, durant la période wilhelminienne.
+                    <br/><Link classename="lienNotif" to="/monu/templeneuf" > Plus d'infos</Link>
+                </Popup>
             </Marker>
         );
     };
@@ -178,7 +193,9 @@ class marqueursPerso extends Component {
                 <Popup>
                     <h1> Tour Camoufle </h1><br />
                     Square Camoufle, 57000 Metz  <br />
-                    La tour Camoufle est un vestige de l’ancienne enceinte médiévale de Metz en Moselle. C’est l’une des rares tours de l’enceinte médiévale à avoir été conservée.          </Popup>
+                    La tour Camoufle est un vestige de l’ancienne enceinte médiévale de Metz en Moselle. C’est l’une des rares tours de l’enceinte médiévale à avoir été conservée.
+                    <br/><Link classename="lienNotif" to="/monu/tourcamoufle" > Plus d'infos</Link>
+                </Popup>
             </Marker>
         );
     };

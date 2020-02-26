@@ -172,9 +172,7 @@ h1{
   height: 170px;
   width: 100%;
 }
-.Horaires{
-  background-color: lightseagreen;
-}
+
 .Accordeon{
   width: 90%;
   margin-left: 5%;
@@ -216,4 +214,8 @@ h1{
   width: 40%;
   margin-left: 30%;
   margin-bottom: 5%;
+}
+
+.linkcolor{
+  color : white;
 }
