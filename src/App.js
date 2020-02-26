@@ -14,13 +14,12 @@ import axios from 'axios';
 import TestPage from "./pages/test";
 import TestPage2 from "./pages/test2";
 import Cathedrale from "./pages/DesCathedrale";
-import Opera from "./pages/test";
+import Opera from "./pages/DesOperaTheatre";
 import Templeneuf from "./pages/DesTempleNeuf";
-import Porteserp from "./pages/test";
+import Porteserp from "./pages/DesPorteSerpenoise";
 import Porteall from "./pages/DesPorteDesAllemands";
-import Centrepom from "./pages/test";
-import Tourcamoufle from "./pages/test";
-import DesCP from "./pages/DesCentrePompidou";
+import Tourcamoufle from "./pages/DesTourCamoufle";
+import Centrepom from "./pages/DesCentrePompidou";
 import marqueursPerso from "./utils/marqueursPerso"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -374,7 +373,6 @@ class App extends Component {
                 <Route exact path="/monu/porteserp" component={Porteserp} />
                 <Route exact path="/monu/porteall" component={Porteall} />
                 <Route exact path="/monu/tourcamoufle" component={Tourcamoufle} />
-                <Route exact path="/DesCentrePompidou" component={DesCP}/>
             </Router>
         );
     }

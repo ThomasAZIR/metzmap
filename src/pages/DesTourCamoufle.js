@@ -50,7 +50,7 @@ const DesCP = () => {
                     </Carousel>
                 </article>
                 <article className="MonuTitre">
-                    <p>Centre Pompidou </p>
+                    <p>Tour Camoufle</p>
                 </article>
                 <article>
                     <Accordion className="Accordeon" defaultActiveKey="0">
@@ -60,13 +60,8 @@ const DesCP = () => {
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                    Lundi    : 10:00-18:00 <br/>
-                                    Mardi    :    Fermé    <br/>
-                                    Mercredi : 10:00-18:00 <br/>
-                                    Jeudi    : 10:00-18:00 <br/>
-                                    Vendredi : 10:00-18:00 <br/>
-                                    Samedi   : 10:00-18:00 <br/>
-                                    Dimanche : 10:00-18:00<br/>
+                                    Zone libre d'accès<br/>
+                                    Ouvert 24h/24 | 7j/7
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -76,12 +71,23 @@ const DesCP = () => {
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="1">
                                 <Card.Body>
-                                    Le centre Pompidou-Metz (CPM) est un établissement public de coopération culturelle d’art situé à Metz, entre le parc de la Seille et la gare. Sa construction est réalisée dans le cadre de l’opération d’aménagement du quartier de l’Amphithéâtre.<br/><br/>
-                                    Sa création est la première expérience de décentralisation d’un établissement public culturel, en l’occurrence le centre national d'art et de culture Georges-Pompidou de Paris. Perçu comme élément fondateur du nouveau quartier de l’Amphithéâtre, il a ouvert ses portes le 12 mai 2010. Les architectes associés sont: Shigeru Ban, Jean de Gastines, et Philip Gumuchdjian. Le maître d’ouvrage est la communauté d’agglomération de Metz Métropole en partenariat avec le centre Pompidou. La ville de Metz est mandataire du maître d’ouvrage. Le projet est également financé par la ville de Metz, le conseil général de la Moselle, le conseil régional de Lorraine, l’État et la Communauté européenne. L’édifice est réalisé par l’entreprise de construction Demathieu & Bard.<br/><br/>
-                                    La première pierre a été posée le 7 novembre 2006 par Claude Pompidou, épouse de Georges Pompidou. Le centre s’inscrit dans un projet d’urbanisation du quartier de l’Amphithéâtre au lieu d’anciennes friches ferroviaires. Engagé par Metz-Métropole, le nouveau quartier est dédié aux affaires, au commerce et à l’habitation, dans une démarche de haute qualité environnementale (HQE).<br/><br/>
-                                    L’architecture de l’édifice est inspirée d’un chapeau chinois traditionnel acheté par Shigeru Ban à la Maison de la Chine dans le quartier de Saint-Germain-des-Prés à Paris.<br/><br/>
-                                    Créé en 2010, le centre Pompidou-Metz est l'un des musées français les plus visités hors de Paris , du fait notamment de sa proximité avec l'Allemagne, le Luxembourg et la Belgique.<br/><br/>
-                                    Le budget total de l’opération se monte à 69,33 millions d’euros hors taxes en 2009. Il comprend 51,66 millions € hors taxes pour les travaux de construction du bâtiment et 17,67 millions € hors taxes pour les honoraires, le mobilier, les aménagements intérieurs et extérieurs et les frais divers. La communauté d’agglomération de Metz-Métropole finance majoritairement le projet à hauteur de 43,33 millions €. Les autres financements proviennent de l’État (4 millions €), de l’Union européenne à travers le plan Feder (2 millions €), de la région Lorraine (10 millions €) et du département de la Moselle (10 millions €).
+                                    Aux xive et xve siècles, la Lorraine devient le théâtre régulier d’affrontements entre différents seigneurs du Saint-Empire romain germanique. Les ducs de Lorraine,
+                                    de Bar, de Luxembourg, les comtes de Deux-Ponts, de Vaudémont, l’archevêque de Trèves, les évêques de Metz, Toul et Verdun, s’allient ou s’opposent au gré des circonstances,
+                                    dans un monde fortement marqué par la féodalité.
+                                    <br/><br/>
+                                    La tour Camoufle est un vestige de l’ancienne enceinte médiévale de Metz en Moselle. Elle est légèrement antérieure à l’extension de la porte des Allemands par Henry de Busdorff : sa
+                                    construction est entreprise en 1437 lors du renforcement des sept kilomètres de remparts messins à l’emplacement d’une ancienne tour gallo-romaine. Elle se situe alors à l’angle de la
+                                    fausse braie entre la porte Serpenoise qu’elle défend et la porte Saint-Thiébault. Elle est édifiée sous le nom de tour du Champ à Panne et se voit garnie de pièces d’artillerie. Elle
+                                    porte le surnom de Jacob de Castel dit « Camoufle », un bombardier messin du xve siècle célèbre pour son adresse, au point d’être soupçonné d’avoir passé un pacte avec le diable.
+                                    D’abord tour du rempart médiéval, elle assure sa fonction défensive jusqu’au siège de Charles Quint. Elle porte des traces de boulets, vraisemblablement des sièges de 1444 et 1552.
+                                    <br/><br/>
+                                    En 1732, Cormontaigne aménage le nouveau rempart Saint-Thiébault et fait garder la tour. À l’époque moderne, compte tenu des progrès de l’artillerie, elle perd de son utilité, mais
+                                    elle est conservée sur le rempart sans trop de dommages.
+                                    En 1903, lors des travaux d’urbanisme dans le nouveau quartier impérial de Metz, le fossé des remparts est remblayé au moment de la création de l’avenue Foch, enfouissant plus de la
+                                    moitié de la tour.
+                                    <br/><br/>
+                                    La tour Camoufle fait l’objet d’une inscription au titre des monuments historiques depuis le 31 décembre 1929. Elle est aujourd'hui désaffectée mais reste l'une des rares tours de
+                                    l'ancienne médiévale à avoir été conservée.
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
