@@ -15,7 +15,37 @@ import Button from "react-bootstrap/Button";
 import circuit from "../assets/circuitb.png";
 import carto from "../assets/carteb.png";
 import monum from "../assets/rechercheb.png";
+import ReactNotification from 'react-notifications-component'
+import {store} from "react-notifications-component"
+import "../utils/animate.css"
+import 'react-notifications-component/dist/theme.css'
 /* We simply can use an array and loop and print each user */
+
+function Home(){
+    const handleOnClickDefault = () => {
+        store.addNotification({
+            title:"New Card added",
+            message : "yes",
+            type : "success",
+            container: "top-right",
+            insert:"top",
+            animationIn : ["animated", "fadeIn"],
+            animationOut : ["animated", "fadeOut"],
+
+            dismiss:{
+                duration:2000
+            }
+        })
+    }
+    return(
+        <div>
+            <button onClick={handleOnClickDefault}>
+                default
+            </button>
+        </div>
+    )
+}
+
 const TestPage2 = () => {
     return (
         <div className = 'App'>
@@ -24,6 +54,8 @@ const TestPage2 = () => {
             </header>
 
             <body>
+            <ReactNotification/>
+            <Home />
             <p>Parcours</p>
             </body>
 

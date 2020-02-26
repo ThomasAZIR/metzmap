@@ -36,6 +36,18 @@ const TestPage = () => {
                 <p>Coordonnées: Lat: 49.108359 / Long: 6.181696</p>
                 <p>Description: Musée d'Art </p>
             </div>
+                <div className="sep">
+                    <h2>Centre Pompidou de Metz</h2>
+                    <p>Adresse: 1 Parvis des Droits de l'Homme - 57020 Metz</p>
+                    <p>Coordonnées: Lat: 49.108359 / Long: 6.181696</p>
+                    <p>Description: Musée d'Art </p>
+                </div>
+                <div className="sep">
+                    <h2>Centre Pompidou de Metz</h2>
+                    <p>Adresse: 1 Parvis des Droits de l'Homme - 57020 Metz</p>
+                    <p>Coordonnées: Lat: 49.108359 / Long: 6.181696</p>
+                    <p>Description: Musée d'Art </p>
+                </div>
             <div className="last">
                 <Link to="/porte_allemands"><h2>Porte des Allemands</h2></Link>
                 <p>Adresse: Boulevard André Maginot - 57000 Metz</p>
