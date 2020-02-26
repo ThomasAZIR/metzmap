@@ -40,8 +40,8 @@ const TestPage = () => {
                 <p>Description : La cathédrale Saint-Étienne de Metz est la cathédrale catholique du diocèse de Metz, dans le département français de la Moselle en région Grand Est.</p>
                 </div>
                 <div className="sep">
-                    <Link to="/pompidou_des"><h2>Centre Pompidou de Metz</h2></Link>
-                    <Link to="/pompidou_des"><img className="listemon" src={pompidou}/></Link>
+                    <Link to="/DesCentrePompidou"><h2>Centre Pompidou de Metz</h2></Link>
+                    <Link to="/DesCentrePompidou"><img className="listemon" src={pompidou}/></Link>
                     <p>Adresse: 1 Parvis des Droits de l'Homme - 57020 Metz</p>
                     <p>Coordonnées: Lat: 49.108359 - Long: 6.181696</p>
                     <p>Description: Musée d'Art </p>

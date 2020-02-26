@@ -140,3 +140,62 @@ h1{
   padding-top: 5px;
   padding-bottom: 10px;
 }
+
+.Bmonu {
+  margin-bottom: 90px;
+  background-color: #ECECEC;
+}
+.MonuImage {
+  height: 200px;
+}
+.MonuImageTN{
+  height: 300px;
+}
+.ImageCSE{
+  height: 170px;
+  width: 100%;
+}
+.Horaires{
+  background-color: lightseagreen;
+}
+.Accordeon{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+.MonuTitre{
+  text-align: center;
+  margin-top: 45px;
+  font-size: 26px;
+}
+.MonuInfo {
+  border-style: solid;
+  border-width: 0px ;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
+  height: 20%;
+  background-color: lightseagreen;
+  border-radius: 10px 10px 10px 10px;
+
+}
+#Emp {
+  font-size: 19px;
+  font-weight: bold;
+  margin-left: 5%;
+  color: #ECECEC;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+  width: 90%;
+}
+
+#Adresse {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: #ECECEC;
+}
+#vp {
+  margin-left: 30%;
+  margin-bottom: 5%;
+}
