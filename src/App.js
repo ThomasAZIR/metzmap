@@ -6,6 +6,8 @@ import {Map, TileLayer, Marker, Popup} from 'react-leaflet'
 import axios from 'axios';
 import TestPage from "./pages/test";
 import TestPage2 from "./pages/test2";
+import Pompidou from "./pages/pompidou_des";
+import Porte_All from "./pages/porte_allemands";
 import checkDist from "./utils/checkDist";
 import marqueursPerso from "./utils/marqueursPerso"
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,6 +28,7 @@ import {win} from "leaflet/src/core/Browser";
 import ReactNotification, {store} from "react-notifications-component";
 import "./utils/animate.css"
 import 'react-notifications-component/dist/theme.css'
+import CatheSE from "./pages/cathédraleSE";
 
 class App extends Component {
 
@@ -294,7 +297,9 @@ class App extends Component {
                 <Route exact path="/" component={this.MainPage} />
                 <Route exact path="/test" component={TestPage} />
                 <Route exact path="/test2" component={TestPage2} />
-
+                <Route exact path="/pompidou_des" component={Pompidou} />
+                <Route exact path="/porte_allemands" component={Porte_All} />
+                <Route exact path="/cathédraleSE" component={CatheSE} />
             </Router>
         );
     }
