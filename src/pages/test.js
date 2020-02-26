@@ -33,8 +33,8 @@ const TestPage = () => {
             <h1>Liste des monuments</h1>
             <div className="liste">
                 <div className="sep">
-                <Link to="/cathédraleSE"><h2>Cathédrale Saint-Etienne de Metz</h2></Link>
-                    <Link to="/"><img className="listemon" src={catheSE}/></Link>
+                <Link to="/"><h2>Cathédrale Saint-Etienne de Metz</h2></Link>
+                <Link to="/"><img className="listemon" src={catheSE}/></Link>
                 <p>Adresse : places d'Armes - 57000 Metz</p>
                 <p>Coordonnées : Lat: 49.120476 - Long: 6.175774</p>
                 <p>Description : La cathédrale Saint-Étienne de Metz est la cathédrale catholique du diocèse de Metz, dans le département français de la Moselle en région Grand Est.</p>

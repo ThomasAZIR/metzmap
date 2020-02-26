@@ -20,6 +20,7 @@ import Porteserp from "./pages/test";
 import Porteall from "./pages/test";
 import Centrepom from "./pages/test";
 import Tourcamoufle from "./pages/test";
+import DesCP from "./pages/DesCentrePompidou";
 import marqueursPerso from "./utils/marqueursPerso"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
@@ -373,6 +374,7 @@ class App extends Component {
                 <Route exact path="/monu/porteserp" component={Porteserp} />
                 <Route exact path="/monu/porteall" component={Porteall} />
                 <Route exact path="/monu/tourcamoufle" component={Tourcamoufle} />
+                <Route exact path="/DesCentrePompidou" component={DesCP}/>
             </Router>
         );
     }

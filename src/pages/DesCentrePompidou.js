@@ -18,12 +18,11 @@ import monum from "../assets/rechercheb.png";
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import Carousel from "react-bootstrap/Carousel";
-import CSE from "../assets/CSE.jpg";
-import CSE2 from "../assets/CSE2.jpg";
-import CSE3 from "../assets/CSE3.jpg";
+import CP from "../assets/CP.jpg";
+import CP2 from "../assets/CP2.jfif";
 
 /* We simply can use an array and loop and print each user */
-const DesCathedrale = () => {
+const DesCP = () => {
     return (
         <div className = 'App'>
             <header className="App-header">
@@ -37,34 +36,27 @@ const DesCathedrale = () => {
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src={CSE}
-                                alt="First slide"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={CSE2}
+                                src={CP2}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src={CSE3}
+                                src={CP}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                     </Carousel>
                 </article>
                 <article className="MonuTitre">
-                    <p>Cathédrale Saint-Étienne </p>
+                    <p>Centre Pompidou </p>
                 </article>
                 <article>
                     <Accordion className="Accordeon" defaultActiveKey="0">
                         <Card className="Horaires">
                             <Accordion.Toggle as={Card.Header} eventKey="0">
-                                Horraires
+                                Horaires
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
@@ -135,4 +127,4 @@ const DesCathedrale = () => {
     );
 };
 
-export default DesCathedrale;
+export default DesCP;
