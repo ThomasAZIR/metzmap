@@ -18,9 +18,10 @@ import monum from "../assets/rechercheb.png";
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import Carousel from "react-bootstrap/Carousel";
-import CSE from "../assets/CSE.jpg";
-import CSE2 from "../assets/CSE2.jpg";
-import CSE3 from "../assets/CSE3.jpg";
+import CSE from "../assets/PS.jpg";
+import CSE2 from "../assets/PS2.jpg";
+import App from "../App";
+
 
 /* We simply can use an array and loop and print each user */
 const DesPorteSertp = () => {
@@ -48,13 +49,6 @@ const DesPorteSertp = () => {
                                 alt="Third slide"
                             />
                         </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src={CSE3}
-                                alt="Third slide"
-                            />
-                        </Carousel.Item>
                     </Carousel>
                 </article>
                 <article className="MonuTitre">
@@ -64,10 +58,12 @@ const DesPorteSertp = () => {
                     <Accordion className="Accordeon" defaultActiveKey="0">
                         <Card className="Horaires">
                             <Accordion.Toggle as={Card.Header} eventKey="0">
-                                Horraires
+                                Horaires
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
+                                    Zone libre d'accès<br/>
+                                    Ouvert 24h/24 | 7j/7
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
@@ -111,7 +107,7 @@ const DesPorteSertp = () => {
                 <article className="MonuInfo">
                     <p id="Emp">Emplacement :</p>
                     <p id="Adresse">Place d'Armes, 57000 Metz</p>
-                    <Button id="vp" variant="warning">Voir sur la Map</Button>
+                    <Link to={"/"} > <Button onClick={App.centrerPorteSerp()} id="vp" variant="warning">Voir sur la carte</Button> </Link>
                 </article>
 
             </section>

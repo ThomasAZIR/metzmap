@@ -20,6 +20,7 @@ import Accordion from "react-bootstrap/Accordion";
 import Carousel from "react-bootstrap/Carousel";
 import TN from "../assets/TN.jpg"
 import TN2 from "../assets/TN2.jpg"
+import App from "../App";
 
 
 /* We simply can use an array and loop and print each user */
@@ -57,7 +58,7 @@ const DesTempleNeuf = () => {
                     <Accordion className="Accordeon" defaultActiveKey="0">
                         <Card className="Horaires">
                             <Accordion.Toggle as={Card.Header} eventKey="0">
-                                Horraires
+                                Horaires
                             </Accordion.Toggle>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
@@ -86,7 +87,7 @@ const DesTempleNeuf = () => {
                 <article className="MonuInfo">
                     <p id="Emp">Emplacement :</p>
                     <p id="Adresse">Place de la Comédie, 57000 Metz</p>
-                    <Button id="vp" variant="warning">Voir sur la Map</Button>
+                    <Link to={"/"} > <Button onClick={App.centrerTempleNeuf()} id="vp" variant="warning">Voir sur la carte</Button> </Link>
                 </article>
 
             </section>

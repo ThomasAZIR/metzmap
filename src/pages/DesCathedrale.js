@@ -15,6 +15,7 @@ import Button from "react-bootstrap/Button";
 import circuit from "../assets/circuitb.png";
 import carto from "../assets/carteb.png";
 import monum from "../assets/rechercheb.png";
+import App from "../App.js";
 import Card from "react-bootstrap/Card";
 import Accordion from "react-bootstrap/Accordion";
 import Carousel from "react-bootstrap/Carousel";
@@ -99,7 +100,7 @@ const DesCathedrale = () => {
                 <article className="MonuInfo">
                     <p id="Emp">Emplacement :</p>
                     <p id="Adresse">Place d'Armes, 57000 Metz</p>
-                    <Button id="vp" variant="warning">Voir sur la Map</Button>
+                    <Link to={"/"} > <Button onClick={App.centrerCath()} id="vp" variant="warning">Voir sur la carte</Button> </Link>
                 </article>
 
             </section>

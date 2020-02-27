@@ -25,6 +25,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import logo from './assets/logoo.png';
+import logoo from './assets/logo.png';
 import carto from './assets/carteb.png';
 import circuit from './assets/circuitb.png';
 import monum from './assets/rechercheb.png';
@@ -157,7 +158,7 @@ class App extends Component {
         var lo = 6.171036;
         //console.log(this.calculDist(lat1, lon1, la, lo))
         if ((this.calculDist(lat1, lon1, la, lo) < 0.1) && App.notifiablePorteSerp) {
-            App.notifiablePorteAll= false;
+            App.notifiablePorteSerp= false;
             App.handleOnClickDefault("Porte Serpenoise", "/monu/porteserp");
             if (navigator.vibrate) {
                 // vibration API supported
@@ -274,10 +275,38 @@ class App extends Component {
     }
 
     recentrer(){
-        console.log(App.pos);
+        //console.log(App.pos);
         App.pos=[0,0];
         App.pos = [App.lat,App.long];
+    }
 
+    static centrerCath(){
+        //console.log(App.pos);
+        App.pos=[49.120144,6.175728];
+    }
+
+    static  centrerCentrePom(){
+        App.pos=[49.10801343213407, 6.181236066001792];
+    }
+
+    static centrerOperaMarqueur(){
+        App.pos=[49.121518, 6.172733];
+    }
+
+    static centrerPorteAll(){
+        App.pos=[49.117763, 6.185567];
+    }
+
+    static centrerPorteSerp(){
+        App.pos=[49.112572, 6.171036];
+    }
+
+    static centrerTempleNeuf(){
+        App.pos=[49.120512, 6.171831];
+    }
+
+    static centrerTourCamoufle(){
+        App.pos=[49.1120838, 6.173649];
     }
 
     static getPos(){

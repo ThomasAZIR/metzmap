@@ -10,7 +10,6 @@
 
 }
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 
@@ -74,7 +73,6 @@ marker{
   background-color: lightseagreen;
   height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);

@@ -21,6 +21,7 @@ import Carousel from "react-bootstrap/Carousel";
 import PA from "../assets/PA.jpg";
 import PA2 from "../assets/PA2.jpg";
 import PA3 from "../assets/PA3.jpg";
+import App from "../App";
 
 
 /* We simply can use an array and loop and print each user */
@@ -98,7 +99,7 @@ const DesPorteDesAllemands = () => {
                 <article className="MonuInfo">
                     <p id="Emp">Emplacement :</p>
                     <p id="Adresse">Boulevard André Maginot, 57000 Metz</p>
-                    <Button id="vp" variant="warning">Voir sur la Map</Button>
+                    <Link to={"/"} > <Button onClick={App.centrerPorteAll()} id="vp" variant="warning">Voir sur la carte</Button> </Link>
                 </article>
 
             </section>

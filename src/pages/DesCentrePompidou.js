@@ -20,6 +20,7 @@ import Accordion from "react-bootstrap/Accordion";
 import Carousel from "react-bootstrap/Carousel";
 import CP from "../assets/images_monuments/CP.jpg";
 import CP2 from "../assets/images_monuments/CP2.jfif";
+import App from "../App";
 
 /* We simply can use an array and loop and print each user */
 const DesCP = () => {
@@ -90,7 +91,7 @@ const DesCP = () => {
                 <article className="MonuInfo">
                     <p id="Emp">Emplacement :</p>
                     <p id="Adresse">Place d'Armes, 57000 Metz</p>
-                    <Button id="vp" variant="warning">Voir sur la Map</Button>
+                    <Link to={"/"} > <Button onClick={App.centrerCentrePom()} id="vp" variant="warning">Voir sur la carte</Button> </Link>
                 </article>
 
             </section>
