@@ -206,6 +206,7 @@ h1{
   font-size: 17px;
   font-weight: bold;
   text-align: center;
+  padding-bottom: 2%;
   color: #ECECEC;
 }
 #vp {
@@ -216,4 +217,46 @@ h1{
 
 .linkcolor{
   color : white;
+}
+.EventDes{
+  border-style: solid;
+  border-width: 5px 0px 5px 0px ;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
+  height: 20%;
+  border-color: goldenrod;
+}
+
+.Accord {
+  margin-bottom: 10%;
+}
+
+
+.Accorder {
+  height: 10vh;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#eventsmetz{
+  font-size: 30px;
+  border-style: solid;
+  border-width: 5px 0px 5px 0px ;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
+  height: 20%;
+  border-color: goldenrod;
+  background-color: goldenrod;
+  border-radius: 10px 10px 10px 10px;
+  height: 8vh;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.Bevents {
+  margin-bottom: 30%;
 }
